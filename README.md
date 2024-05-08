@@ -14,3 +14,4 @@ docker compose up -d
 ```
 Esto creara un contenedor con Oodo y PostgreSQL montando los volumenes para cargar la configuracion y los modulos nuevos.
 ## Presentacion
+![Animation](https://github.com/rdev32/odoo-proj/assets/78289548/8c6881fa-fe3a-4135-837a-39d529657bc8)
