@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <record id="account_cta_cte_action" model="ir.actions.act_window">
+    <field name="name">Cuentas Bancarias</field>
+    <field name="res_model">account.cta.cte</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+        Vaya parece que esto esta vacio
+      </p><p>
+        Aqui veras las diferentes cuentas corrientes registradas
+      </p>
+    </field>
+  </record>
+  
+  <record id="account_cta_cte_view_tree" model="ir.ui.view">
+    <field name="name">account.cta.cte.tree</field>
+    <field name="model">account.cta.cte</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="description" />
+          <field name="balance" />
+          <field name="create_date" />
+        </tree>
+      </field>
+  </record>
+</odoo>

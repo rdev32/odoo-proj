@@ -1,0 +1,18 @@
+services:
+  odoo:
+    container_name: logic_presentation_tier
+    image: odoo:17.0
+    ports:
+      - "8069:8069"
+    volumes:
+      - ./config:/etc/odoo
+      - ./addons:/mnt/extra-addons
+    depends_on:
+      - db
+  db:
+    container_name: data_tier
+    image: postgres:15
+    environment:
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+      POSTGRES_DB: postgres

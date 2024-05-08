@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <template id="report_account_cta_cte">
+      <t t-foreach="docs" t-as="property">
+        <t t-call="web.html_container">
+            <style>a { color: #ffffff; }</style>
+            <div>
+              <div style="background: #ececec; border-radius: 1rem; padding: 2rem;">
+                <h2>Reporte Cuenta Corriente</h2>
+                <p>Generado el dia: <span t-esc="time.strftime('%Y-%m-%d')"/></p>
+              </div>
+              <div style="padding: 2rem;">
+                <div>
+                  <b>Nombre:</b>
+                  <span t-field="property.name"/>
+                </div>
+                <div>
+                  <b>Fecha de Creacion:</b>
+                  <span t-field="property.create_date"/>
+                </div>
+                <div>
+                  <b>Saldo:</b>
+                  <span t-field="property.balance"/>
+                </div>
+                <div>
+                  <b>Descripcion:</b>
+                  <span t-field="property.description"/>
+                </div>
+              </div>
+            </div>
+          <footer style="position: absolute; bottom: 0; color: #ffffff; background: #555555; border-radius: 1rem; padding: 2rem; text-align: right; width: 90%;">
+              <address>
+                  <h2>Empresa Bancaria XYZ S.A.C</h2>
+                  <p>Direccion: Calle Ficticia 123, Ciudad Imaginaria</p>
+                  <p>Telefono: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                  <p>Correo electronico: <a href="mailto:info@empresaxyz.com">info@empresaxyz.com</a></p>
+              </address>
+              <p>Sitio web: <a href="http://www.empresaxyz.com">www.empresaxyz.com</a></p>
+          </footer>
+        </t>
+      </t>
+    </template>
+  </data>
+</odoo>
